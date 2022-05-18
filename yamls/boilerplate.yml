@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: traderbot-boilerplate
+spec:
+ strategy:
+   rollingUpdate:
+     maxSurge: 1
+     maxUnavailable: 1
+   type: RollingUpdate
+ replicas: 1
+ selector:
+   matchLabels:
+     app: boilerplate
+ template:
+   metadata:
+     labels:
+       app: boilerplate
+   spec:
+     containers:
+       - name: boilerplate
+         image: us-central1-docker.pkg.dev/mlops-3/capstone-traderbot/boilerplate:latest
+         resources:
+           limits:
+             cpu: "1"
+             memory: "4Gi"
+           requests:
+             cpu: "1"
+             memory: "4Gi"
+         ports:
+           - containerPort: 8080
+        

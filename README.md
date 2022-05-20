@@ -23,7 +23,7 @@ Deploy data and bot model services
 clear prices database 
 
 
-    $ kubectl exec -it `kubectl get pods -l app=postgres -o wide | grep -v NAME | awk '{print $$1}'` -- psql -U postgres < ./db/schema.sql
+    $ reset-db
     
 
 Terminate all services

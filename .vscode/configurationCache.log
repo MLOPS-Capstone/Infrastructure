@@ -1,0 +1,1 @@
+{"buildTargets":["auth","create-infrastructure","delete-cluster","delete-services","deploy-services","reset-db"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
